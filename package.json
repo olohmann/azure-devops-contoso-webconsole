@@ -1,0 +1,23 @@
+{
+  "name": "azure-devops-contoso-webconsole",
+  "version": "1.0.0",
+  "description": "TODO",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && export TASK_TEST_TRACE=1 && mocha web-console-deploy-task/tests/_suite.js",
+    "build-extension": "npm run build && tfx extension create --manifest-globs vss-extension.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "azure-pipelines-task-lib": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^12.0.0",
+    "@types/q": "^1.5.2"
+  }
+}

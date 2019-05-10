@@ -1,0 +1,28 @@
+{
+    "id": "40e3218c-7ee2-4c95-9fca-b6364f941925",
+    "name": "contoso-web-console-deploy",
+    "friendlyName": "Contoso Web Console Deploy",
+    "description": "Deploy WAR files to Contoso's Web Console.",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Oliver Lohmann",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Contoso Web Console Deploy",
+    "inputs": [{
+        "name": "war-file-path",
+        "type": "filePath",
+        "label": "WAR file path",
+        "defaultValue": "",
+        "required": true,
+        "helpMarkDown": "Path to WAR file which should be deployed."
+    }],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}

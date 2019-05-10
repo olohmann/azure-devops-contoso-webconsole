@@ -1,0 +1,30 @@
+{
+    "manifestVersion": 1,
+    "id": "contoso-web-console",
+    "name": "Contoso Web Console Release Tools",
+    "version": "0.1.1",
+    "publisher": "olohmann",
+    "targets": [{
+        "id": "Microsoft.VisualStudio.Services"
+    }],
+    "description": "Tools for releasing to Contoso's web console.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/placeholder.png"
+    },
+    "files": [{
+        "path": "web-console-deploy-task"
+    }],
+    "contributions": [{
+        "id": "contoso-web-console-deploy",
+        "type": "ms.vss-distributed-task.task",
+        "targets": [
+            "ms.vss-distributed-task.tasks"
+        ],
+        "properties": {
+            "name": "web-console-deploy-task"
+        }
+    }]
+}
