@@ -5,5 +5,5 @@ import path = require('path');
 let taskPath = path.join(__dirname, '..', 'index.js');
 let tmr: tmrm.TaskMockRunner = new tmrm.TaskMockRunner(taskPath);
 
-tmr.setInput('war-file-path', 'bad');
+tmr.setInput('war-file-path', '');
 tmr.run();

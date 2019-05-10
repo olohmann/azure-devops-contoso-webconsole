@@ -1,10 +1,11 @@
 node_modules/
+*.log
 *.vsix
 _build/
 _packages/
 typings/*
 !typings/customs/
 web-console-service-endpoint/*.js
-web-console-task/*.js
-web-console-task/tests/*.js
+web-console-deploy-task/*.js
+web-console-deploy-task/tests/*.js
 .taskkey
