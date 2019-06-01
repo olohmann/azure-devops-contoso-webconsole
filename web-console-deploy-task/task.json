@@ -12,14 +12,32 @@
         "Patch": 0
     },
     "instanceNameFormat": "Contoso Web Console Deploy",
-    "inputs": [{
-        "name": "war-file-path",
-        "type": "filePath",
-        "label": "WAR file path",
-        "defaultValue": "",
-        "required": true,
-        "helpMarkDown": "Path to WAR file which should be deployed."
-    }],
+    "inputs": [
+        {
+            "name": "serverEndpoint",
+            "type": "connectedService:Generic",
+            "label": "Contoso Web Console Connection",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Select the service connection for your web console server.  To create one, click the Manage link and create a new Generic service connection, enter the server URL for the server URL, e.g. <b>`https://server.example.com`</b>, and required credentials."
+        },
+        {
+            "name": "applicationName",
+            "type": "string",
+            "label": "Application Name",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Application name on the Contoso Web Console."
+        },
+        {
+            "name": "warFilePath",
+            "type": "filePath",
+            "label": "WAR file path",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Path to WAR file which should be deployed."
+        }
+    ],
     "execution": {
         "Node": {
             "target": "index.js"

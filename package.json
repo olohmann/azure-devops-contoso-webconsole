@@ -5,14 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && export TASK_TEST_TRACE=1 && mocha web-console-deploy-task/tests/_suite.js",
+    "test": "export NODE_ENV=test && npm run build && export TASK_TEST_TRACE=1 && mocha web-console-deploy-task/tests/_tests.js",
     "build-extension": "npm run build && tfx extension create --manifest-globs vss-extension.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
     "azure-pipelines-task-lib": "^2.8.0",
     "form-data": "^2.3.3"
   },
@@ -20,6 +19,8 @@
     "@types/form-data": "^2.2.1",
     "@types/mocha": "^5.2.6",
     "@types/node": "^12.0.0",
-    "@types/q": "^1.5.2"
+    "@types/q": "^1.5.2",
+    "@types/tmp": "^0.1.0",
+    "tmp": "^0.1.0"
   }
 }
