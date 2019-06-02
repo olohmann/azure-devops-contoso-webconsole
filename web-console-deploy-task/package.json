@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "export NODE_ENV=test && npm run build && export TASK_TEST_TRACE=1 && mocha web-console-deploy-task/tests/_tests.js",
+    "test": "export NODE_ENV=test && npm run build && export TASK_TEST_TRACE=1 && mocha ./tests/_tests.js",
     "build-extension": "npm run build && tfx extension create --manifest-globs vss-extension.json"
   },
   "keywords": [],

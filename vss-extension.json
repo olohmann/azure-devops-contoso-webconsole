@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "contoso-web-console",
     "name": "Contoso Web Console Release Tools",
-    "version": "0.2.0",
+    "version": "0.2.2",
     "publisher": "olohmann",
     "targets": [{
         "id": "Microsoft.VisualStudio.Services"

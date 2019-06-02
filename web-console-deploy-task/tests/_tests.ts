@@ -1,3 +1,4 @@
+import mocha = require ('mocha');
 import assert = require('assert');
 import path = require('path');
 import * as ttm from 'azure-pipelines-task-lib/mock-test';
